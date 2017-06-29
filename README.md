@@ -5,6 +5,4 @@ This is the repo for the Radio Controlled Arduino Racing project to be used as a
 
 
 # Resources
-Code aand Circuit for Receiver and Transmitter with Arduino
-
-http://arduinobasics.blogspot.com/2014/06/433-mhz-rf-module-with-arduino-tutorial.html
+Code aand Circuit for Receiver and Transmitter with Arduino. [Example](http://arduinobasics.blogspot.com/2014/06/433-mhz-rf-module-with-arduino-tutorial.html)
