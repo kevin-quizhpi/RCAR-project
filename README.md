@@ -15,4 +15,6 @@ This is the repo for the Radio Controlled Arduino Racing project to be used as a
 ## Resources
 Code and Circuit for Receiver and Transmitter with Arduino. [Example](http://arduinobasics.blogspot.com/2014/06/433-mhz-rf-module-with-arduino-tutorial.html)
 
+Another set of code for implementing RF module: [link](https://sites.google.com/site/summerfuelrobots/arduino-sensor-tutorials/rf-wireless-transmitter-receiver-module-433mhz-for-arduino)
+
 RC Switch Library that may be useful in operating the RF transmitter and receivers: [link](https://github.com/sui77/rc-switch)
