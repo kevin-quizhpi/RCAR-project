@@ -9,7 +9,7 @@ This is the repo for the Radio Controlled Arduino Racing project to be used as a
 
 - [Refaxi RF Modules](https://www.amazon.com/Wireless-Transmitter-Receiver-Module-Arduino/dp/B00INTI8R2/ref=sr_1_1?s=electronics&ie=UTF8&qid=1499012256&sr=8-1&keywords=refaxi+rf+module)
 
-- [Button caps for remote controller] (https://www.ebay.com/i/291735611601?chn=ps&dispItem=1)
+- [Button caps for remote controller](https://www.ebay.com/i/291735611601?chn=ps&dispItem=1)
 
 
 ## Resources
