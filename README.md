@@ -21,6 +21,14 @@ RF Receiver and RF Transmitter prototypes are test programs to test communicatio
 
 - [Button caps for remote controller](https://www.ebay.com/i/291735611601?chn=ps&dispItem=1)
 
+## Prizes
+
+Another aspect of this project is to have the participants get prizes for their achievments in the races, etc. So we need some prizes! While trying to limit the prizes to something the majority of attendants would be interested in so far I've thought of giving away excess T-shirts we have in the club and 3D printing some prizes.
+
+#### For 3D printing:
+
+- [3D printed Fidget Spinners](https://www.thingiverse.com/thing:2089904)
+
 
 ## Resources
 Sample of the project [Link](http://www.instructables.com/id/Wirelessly-Control-A-Robot-Using-Arduino-and-RF-Mo/)
