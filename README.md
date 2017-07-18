@@ -19,7 +19,7 @@ RF Receiver and RF Transmitter prototypes are test programs to test communicatio
 
 - [Refaxi RF Modules](https://www.amazon.com/Wireless-Transmitter-Receiver-Module-Arduino/dp/B00INTI8R2/ref=sr_1_1?s=electronics&ie=UTF8&qid=1499012256&sr=8-1&keywords=refaxi+rf+module)
 
-- [Button caps for remote controller](https://www.ebay.com/i/291735611601?chn=ps&dispItem=1)
+- [Button caps for remote controller](https://www.ebay.com/i/291735611601?chn=ps&dispItem=1) (*Not used*)
 
 ## Prizes
 
@@ -38,6 +38,10 @@ Code and Circuit for Receiver and Transmitter with Arduino. [Example](http://ard
 Another set of code for implementing RF module: [link](https://sites.google.com/site/summerfuelrobots/arduino-sensor-tutorials/rf-wireless-transmitter-receiver-module-433mhz-for-arduino)
 
 RC Switch Library that may be useful in operating the RF transmitter and receivers: [link](https://github.com/sui77/rc-switch)
+
+Build information for an Antenna: [link](https://www.quora.com/How-can-I-build-an-antenna-for-RF-module-with-frequency-433-MHZ)
+
+
 
 ## Personnel Invovled
 
