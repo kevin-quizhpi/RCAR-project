@@ -18,6 +18,8 @@
 #define bPH 7
 #define bEN 11
 
+bool turn = false;
+
 DRV8835DualMotorDriver motors(aPH, aEN, bPH, bEN, mode);
 
 
@@ -32,6 +34,7 @@ void setup() {
 //  motors.stopBoth();
   Serial.println("Leaving setup.");
   motors.setForwards();
+  digitalWrite(4,HIGH);
 }
 
 void loop() {
@@ -93,12 +96,12 @@ void loop() {
 //      }
       if(value == 1 )
       {
-        Lspd = Lspd + 10;
+        Lspd = Lspd - 10;
         motors.setSpeedB(Lspd);
       }
       if(value == 2)
       {
-        Lspd = Lspd -10;
+        Lspd = Lspd + 10;
         motors.setSpeedB(Lspd);
       }
       if(value ==3) 
@@ -110,6 +113,16 @@ void loop() {
       {
         Rspd = Rspd - 10;
         motors.setSpeedA(Rspd);
+      }
+      if(value == 5 && turn == false)
+      {
+        turn = true;
+        motors.setBackwards();
+      }
+      if(value == 5 && turn == true)
+      {
+        turn = false;
+        motors.setForwards();
       }
       else
         Serial.print("Invalid message\n");
