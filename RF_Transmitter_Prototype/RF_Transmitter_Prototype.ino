@@ -42,7 +42,9 @@ void loop() {
         Serial.print(" button pressed: ");
     Serial.print(digitalRead(rUP));
         Serial.print(" button pressed: ");
-    Serial.println(digitalRead(rDW));
+    Serial.print(digitalRead(rDW));
+        Seria.print(" Turn pressed: ");
+    Serial.println(digitalRead(turn);
 
     if(digitalRead(lDW) == LOW)
     {
