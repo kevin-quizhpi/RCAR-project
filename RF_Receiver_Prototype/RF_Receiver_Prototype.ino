@@ -22,27 +22,28 @@ DRV8835DualMotorDriver motors(aPH, aEN, bPH, bEN, mode);
 
 
 RCSwitch mySwitch = RCSwitch();
-int spd = 50;
-
+int Lspd = 50;
+int Rspd = 50;
 void setup() {
   Serial.begin(9600);
   motors.SetPinMode();
   mySwitch.enableReceive(0);  // Receiver on inerrupt 0 => that is pin #2
-  motors.setSpeedBoth(spd);
+//  motors.setSpeedBoth(spd);
 //  motors.stopBoth();
   Serial.println("Leaving setup.");
-  motors.setAClockwise();
+  motors.setForwards();
 }
 
 void loop() {
-  motors.setForwards();
+
  
   //Serial.println("In loop!");
   if (mySwitch.available()) {
     
     int value = mySwitch.getReceivedValue();
     
-    if (value == 0) {
+    if (value == 0) 
+    {
       Serial.print("Unknown encoding");
     } else {
 
@@ -72,29 +73,49 @@ void loop() {
 //                     digitalWrite(12,LOW);
 //                     Serial.println("Case 2 !");
 //    }
-      switch (value)
+//      switch (value)
+//      {
+//        case (1):   spd = (spd - 10);
+//                    Serial.print("Speed: ");
+//                    Serial.println(spd);
+//
+//        case (2):   spd = (spd + 10);
+//                    Serial.print("Speed: ");
+//                    Serial.println(spd);
+//
+//        case (3):   spd = (spd + 10);
+//                    Serial.print("Speed: ");
+//                    Serial.println(spd);
+//                    
+//        case (4):   spd = (spd -10);
+//                    Serial.print("Speed: ");
+//                    Serial.println(spd);
+//      }
+      if(value == 1 )
       {
-        case (1):   spd = (spd - 10);
-                    Serial.print("Speed: ");
-                    Serial.println(spd);
-
-        case (2):   spd = (spd + 10);
-                    Serial.print("Speed: ");
-                    Serial.println(spd);
-
-        case (3):   spd = (spd + 10);
-                    Serial.print("Speed: ");
-                    Serial.println(spd);
-                    
-        case (4):   spd = (spd -10);
-                    Serial.print("Speed: ");
-                    Serial.println(spd);
+        Lspd = Lspd + 10;
+        motors.setSpeedB(Lspd);
       }
-      if(value == 1 || value == 2)
-        motors.setSpeedB(spd);
-      else 
-        motors.setSpeedA(spd);
-                
+      if(value == 2)
+      {
+        Lspd = Lspd -10;
+        motors.setSpeedB(Lspd);
+      }
+      if(value ==3) 
+      {
+        Rspd = Rspd +10;
+        motors.setSpeedA(Rspd);
+      }
+      if(value==4)
+      {
+        Rspd = Rspd - 10;
+        motors.setSpeedA(Rspd);
+      }
+      else
+        Serial.print("Invalid message\n");
+
+      Serial.print("Rspd = ");  Serial.print(Rspd);
+      Serial.print(" / Lspd = ");  Serial.println(Lspd);
            
 
  
@@ -102,6 +123,7 @@ void loop() {
 
     mySwitch.resetAvailable();
   }
+  //Serial.println("Switch not available");
 }
 
 

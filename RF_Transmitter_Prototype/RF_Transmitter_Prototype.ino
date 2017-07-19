@@ -7,6 +7,7 @@
 #define rDW 12
 #define lUP 8
 #define lDW 9
+#define turn
 
 
 RCSwitch mySwitch = RCSwitch();
@@ -23,6 +24,7 @@ void setup() {
   pinMode(rDW,INPUT);
   pinMode(lUP,INPUT);
   pinMode(lDW,INPUT);
+  pinMode(turn,INPUT);
 }
 
 void loop() {
@@ -58,6 +60,12 @@ void loop() {
     {
       mySwitch.send(4,24);
     }
+    if(digitalRead(turn == LOW)
+    {
+      mySwitch.send(5,24);
+    }
+    else
+      mySwitch.send(35,24);
 
    
 
